@@ -154,8 +154,11 @@ router.get("/Bengaluru/Hotels", async (req, res) => {
 
 // GET --- Specific Hotel with ID --------------------------------------------
 router.get("/Bengaluru/Hotels/:id", async (req, res) => {
-  const bengaluruHotels = await Hotels.findById(req.params.id).lean().exec();
-  return res.status(200).send(bengaluruHotels);
+  // const bengaluruHotels = await Hotels.findById(req.params.id).lean().exec();
+  // return res.status(200).send(bengaluruHotels);
+  const my_id = req.params.id;
+  const temp = await Hotels.find({ location_id: "608386" }).lean().exec();
+  res.send({ data: temp });
 });
 
 // --------------------------------- Restaurants ------------------------------
