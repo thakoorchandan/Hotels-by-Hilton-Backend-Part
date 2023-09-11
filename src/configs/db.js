@@ -7,4 +7,6 @@ const connect = () => {
   );
 };
 
+//mongodb+srv://thakoorchandan:<password>@cluster0.hgd7w.mongodb.net/?retryWrites=true&w=majority
+
 module.exports = connect;
